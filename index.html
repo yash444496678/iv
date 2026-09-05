@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vault</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="brand"><div class="mark"><i class="ti ti-diamond" aria-hidden="true"></i></div><span>Vault</span></div>
+  <div id="nav"></div>
+  <div class="sidebar-footer">
+    <div class="storage-label"><span>Storage</span><span id="storage-text">0 MB</span></div>
+    <div class="storage-track"><div class="storage-fill" id="storage-fill"></div></div>
+  </div>
+</div>
+
+<div class="main" id="main-drop">
+  <div class="topbar">
+    <h1 id="section-title">All items</h1>
+    <div class="search-wrap"><i class="ti ti-search" aria-hidden="true"></i><input id="search" placeholder="Search your vault"/></div>
+    <button class="btn primary" id="btn-upload"><i class="ti ti-plus" aria-hidden="true"></i>Add files</button>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card"><div class="lbl">Total items</div><div class="val" id="stat-total">0</div></div>
+    <div class="stat-card"><div class="lbl">Images</div><div class="val" id="stat-images">0</div></div>
+    <div class="stat-card"><div class="lbl">Documents</div><div class="val" id="stat-docs">0</div></div>
+    <div class="stat-card"><div class="lbl">Other files</div><div class="val" id="stat-other">0</div></div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty">
+    <i class="ti ti-cloud-upload" aria-hidden="true"></i>
+    <p>Nothing here yet. Drag and drop files anywhere, or click "Add files" to get started.</p>
+  </div>
+</div>
+
+<input type="file" id="file-input" multiple/>
+
+<div class="overlay" id="overlay">
+  <div class="modal" id="modal-body"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- type="module" is required for Firebase's modular SDK -->
+<script type="module" src="script.js"></script>
+</body>
+</html>
